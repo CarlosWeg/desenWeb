@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página HTML Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bem-vindo!</h1>
+    
+    <p>Página Simples!</p>
+    
+    <ul>
+        <li>h1: Título principal</li>
+        <li>p: Parágrafos de texto</li>
+        <li>ul e li: Listas não ordenadas</li>
+        <li>a: Links</li>
+    </ul>
+    
+    <p>Mais <a href="https://www.w3schools.com" target="_blank">aqui</a>.</p>
+
+</body>
+</html>
