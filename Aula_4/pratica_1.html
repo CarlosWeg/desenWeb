@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Pessoa</title>
+    <link rel="stylesheet" href = "style_pratica_1.css">
+</head>
+<body>
+    <h1>Cadastro de Pessoa</h1>
+    <form>
+        <label class = "primeira_parte" for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required maxlength="100"><br><br>
+
+        <label class = "primeira_parte" for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" name="sobrenome" required maxlength="100"><br><br>
+
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento" min="1920-01-01" max="2024-01-01"><br><br>
+
+        <label>Sexo:</label>
+        <input type="radio" id="masculino" name="sexo" value="Masculino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="feminino" name="sexo" value="Feminino">
+        <label for="feminino">Feminino</label><br><br>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" maxlength="200"><br><br>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" maxlength="10"><br><br>
+
+        <label for="cor_favorita">Cor favorita:</label>
+        <input type="color" id="cor_favorita" name="cor_favorita"><br><br>
+
+        <label for="estado">Estado (UF):</label>
+        <select id="estado" name="estado">
+            <option value="PR">Paraná (PR)</option>
+            <option value="RS">Rio Grande do Sul (RS)</option>
+            <option value="SC">Santa Catarina (SC)</option>
+        </select><br><br>
+
+        <input type="submit" value="Cadastrar">
+
+    </form>
+</body>
+</html>
