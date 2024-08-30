@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="pratica_1.css">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculadora</h2>
+        <input type="number" id="num1" placeholder="Digite o primeiro número">
+        <input type="number" id="num2" placeholder="Digite o segundo número">
+        <select id="operation">
+            <option value="add">Somar</option>
+            <option value="subtract">Subtrair</option>
+            <option value="multiply">Multiplicar</option>
+            <option value="divide">Dividir</option>
+        </select>
+        <button onclick="calculate()">Calcular</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="pratica_1.js"></script>
+</body>
+</html>
