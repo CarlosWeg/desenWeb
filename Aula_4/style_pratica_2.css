@@ -1,48 +1,65 @@
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
-    color: white;
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #fff3cd;
+    margin: 0;
+    padding: 20px;
+    color: #333;
 }
 
 form {
-    border: 1px solid #A9A9A9;
-    background-image: url(https://miro.medium.com/v2/resize:fit:1400/1*RMfeHmxV0qpFse0RPuD6iQ.png);
-    width: 450px;
+    background-color: #ffeb99;
     padding: 20px;
+    border-radius: 10px;
 }
 
-label {
-    font-weight: bold;
+fieldset {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ffa500;
 }
 
-input[type="text"], 
-input[type="email"],
-input[type="date"],
-input[type="color"],
-select {
-    padding: 5px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    border: 1px solid #A9A9A9;
-    background-color: #D3D3D3;
+legend{
+    background-color: red;
+}
+.campo {
+    margin-bottom: 15px;
+}
+
+#infoContato {
+    background-color: #ffcc80;
+}
+
+#infoIdentificacao, #infoEndereco {
+    background-color: #ffb74d;
+}
+
+input[type="text"], input[type="email"], input[type="date"], input[type="color"], select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffa500;
+    width: 100%;
 }
 
 input[type="radio"] {
     margin-right: 5px;
 }
 
-input[type="submit"] {
-    width: 100px;
-    padding: 5px;
-    background-color: #5bee8c;
-    border: 1px solid #A9A9A9;
-    border-radius: 3px;
+input[type="submit"], input[type="reset"] {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffa500;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
 }
 
+input[type="submit"]:hover {
+    background-color: #ff8c00;
+}
 
-h1 {
-    font-size: 18px;
-    background-color: #6495ED;
-    color: white;
-    padding: 10px;
-    text-align: center;
+input[type="reset"]:hover {
+    background-color: #ff6347;
 }
