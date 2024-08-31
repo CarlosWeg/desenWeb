@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página HTML Simples</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        p {
-            color: #666;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Prática 1 - Página Simples</title>
+    <link rel="stylesheet" href="pratica_1.css">
 </head>
+
 <body>
 
-    <h1>Bem-vindo!</h1>
-    
-    <p>Página Simples!</p>
-    
-    <ul>
-        <li>h1: Título principal</li>
-        <li>p: Parágrafos de texto</li>
-        <li>ul e li: Listas não ordenadas</li>
-        <li>a: Links</li>
-    </ul>
-    
-    <p>Mais <a href="https://www.w3schools.com" target="_blank">aqui</a>.</p>
+    <header>
+        <h1>Bem-Vindo!</h1>
+        <h2>Esta é uma página de formulário.</h2>
+    </header>
+
+    <h3>Formulário de Cadastro de Usuário</h3>
+
+    <form>
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div>
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
+        </div>
+
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+            <label for="tipoPessoa">Tipo Pessoa:</label>
+            <select id="tipoPessoa" name="tipoPessoa" required>
+                <option value="fisica">Física</option>
+                <option value="juridica">Jurídica</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+        </div>
+
+        <div>
+            <label for="uf">UF (estado):</label>
+            <input type="text" id="uf" name="uf" maxlength="2" required>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+    </form>
 
 </body>
+
 </html>
