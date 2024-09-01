@@ -2,24 +2,52 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Calculadora Simples</title>
+    <title>Aula 5 - Calculadora</title>
     <link rel="stylesheet" href="pratica_1.css">
 </head>
 <body>
+
     <div class="calculator">
+
         <h2>Calculadora</h2>
-        <input type="number" id="num1" placeholder="Digite o primeiro número">
-        <input type="number" id="num2" placeholder="Digite o segundo número">
-        <select id="operation">
-            <option value="add">Somar</option>
-            <option value="subtract">Subtrair</option>
-            <option value="multiply">Multiplicar</option>
-            <option value="divide">Dividir</option>
-        </select>
-        <button onclick="calculate()">Calcular</button>
+
+        <input type="text" id="display" placeholder="Digite ou selecione números" readonly>
+
+        <div>
+            <button class="num" onclick="addToDisplay(1)">1</button>
+            <button class="num" onclick="addToDisplay(2)">2</button>
+            <button class="num" onclick="addToDisplay(3)">3</button>
+        </div>
+        <div>
+            <button class="num" onclick="addToDisplay(4)">4</button>
+            <button class="num" onclick="addToDisplay(5)">5</button>
+            <button class="num" onclick="addToDisplay(6)">6</button>
+        </div>
+        <div>
+            <button class="num" onclick="addToDisplay(7)">7</button>
+            <button class="num" onclick="addToDisplay(8)">8</button>
+            <button class="num" onclick="addToDisplay(9)">9</button>
+        </div>
+
+        <div class="linha-zero">
+            <button class="num" onclick="addToDisplay(0)">0</button>
+            <button class="num" onclick="clearDisplay()">C</button>
+        </div>
+
+        <div>
+            <button class="somar" onclick="setOperation('add')">Somar</button>
+            <button class="subtrair" onclick="setOperation('subtract')">Subtrair</button>
+        </div>
+        <div>
+            <button class="multiplicar" onclick="setOperation('multiply')">Multiplicar</button>
+            <button class="dividir" onclick="setOperation('divide')">Dividir</button>
+        </div>
+        <button class="igual" onclick="calculate()">=</button>
+
         <div id="result"></div>
     </div>
 
     <script src="pratica_1.js"></script>
+    
 </body>
 </html>
