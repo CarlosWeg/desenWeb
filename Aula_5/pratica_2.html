@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Notas dos Alunos</title>
-    <script src="pratica_2.js" defer></script>
+    <style>
+        button {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Notas dos Alunos</h1>
-    <table border="1" id="tabela">
+    <button onclick="adicionarLinhaTotalizadora()">Adicionar Linha Totalizadora</button>
+    <button onclick="adicionarColunaTotalizadora()">Adicionar Coluna Totalizadora</button>
+    <table border="1" id="tabelaNotas">
         <tr>
             <th rowspan="2">Aluno</th>
             <th colspan="3">Semestre 1</th>
@@ -98,7 +104,6 @@
             <td></td>
         </tr>
     </table>
-    <button onclick="adicionarLinhaTotalizadora()">Adicionar Linha Totalizadora</button>
-    <button onclick="adicionarColunaTotalizadora()">Adicionar Coluna Totalizadora</button>
+    <script src="pratica_2.js"></script>
 </body>
 </html>

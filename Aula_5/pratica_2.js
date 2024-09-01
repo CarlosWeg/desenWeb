@@ -1,50 +1,63 @@
+// Adicionar uma linha
 function adicionarLinhaTotalizadora() {
-    const tabela = document.getElementById("tabela");
-    const linhas = tabela.rows;
-    const numLinhas = linhas.length;
-    const numColunas = linhas[0].cells.length;
+    const tabela = document.getElementById('tabelaNotas');
+    const numRows = tabela.rows.length;
+    const numCols = tabela.rows[2].cells.length;
+    
+    let novaLinha = tabela.insertRow(numRows);
 
-    const novaLinha = tabela.insertRow(numLinhas);
-    novaLinha.insertCell(0).innerText = 'Média por Semestre';
+    // Primeira célula
+    let cell = novaLinha.insertCell(0);
+    cell.innerHTML = 'Média';
+    cell.style.fontWeight = 'bold';
 
-    for (let j = 1; j < numColunas; j++) {
+    for (let i = 1; i < numCols; i++) {
         let soma = 0;
-        let contador = 0;
-
-        for (let i = 2; i < numLinhas; i++) {
-            const valor = parseFloat(linhas[i].cells[j].innerText);
+        let count = 0;
+        for (let j = 2; j < numRows; j++) {
+            let valor = parseFloat(tabela.rows[j].cells[i].innerHTML);
             if (!isNaN(valor)) {
                 soma += valor;
-                contador++;
+                count++;
             }
         }
-
-        const media = contador === 0 ? '' : (soma / contador).toFixed(2);
-        novaLinha.insertCell(j).innerText = media;
+        let media = (count > 0) ? (soma / count).toFixed(2) : '';
+        cell = novaLinha.insertCell(i);
+        cell.innerHTML = media;
+        cell.style.fontWeight = 'bold';
     }
 }
 
+// Aadicionar uma coluna
 function adicionarColunaTotalizadora() {
-    const tabela = document.getElementById("tabela");
-    const linhas = tabela.rows;
-    const numLinhas = linhas.length;
+    const tabela = document.getElementById('tabelaNotas');
+    const numRows = tabela.rows.length;
 
-    linhas[0].insertCell(-1).outerHTML = '<th rowspan="2">Média do Aluno</th>';
-    linhas[1].insertCell(-1);
+    // Adicionar cabeçalho
+    let headerRow = tabela.rows[0];
+    let subHeaderRow = tabela.rows[1];
+    let headerCell = document.createElement('th');
+    headerCell.rowSpan = 2;
+    headerCell.innerHTML = 'Média';
+    headerCell.style.fontWeight = 'bold';
+    headerCell.style.textAlign = 'center';
+    headerRow.appendChild(headerCell);
 
-    for (let i = 2; i < numLinhas; i++) {
+    // Adicionar células
+    for (let i = 2; i < numRows; i++) {
+        let row = tabela.rows[i];
         let soma = 0;
-        let contador = 0;
-
-        for (let j = 1; j < linhas[i].cells.length - 1; j++) {
-            const valor = parseFloat(linhas[i].cells[j].innerText);
+        let count = 0;
+        for (let j = 1; j < row.cells.length; j++) {
+            let valor = parseFloat(row.cells[j].innerHTML);
             if (!isNaN(valor)) {
                 soma += valor;
-                contador++;
+                count++;
             }
         }
-
-        const media = contador === 0 ? '' : (soma / contador).toFixed(2);
-        linhas[i].insertCell(-1).innerText = media;
+        let media = (count > 0) ? (soma / count).toFixed(2) : '';
+        let novaCelula = row.insertCell(row.cells.length);
+        novaCelula.innerHTML = media;
+        novaCelula.style.fontWeight = 'bold';
     }
 }
