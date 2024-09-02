@@ -38,6 +38,10 @@ button:active {
     opacity: 0.9;
 }
 
+button.somar, button.subtrair, button.multiplicar, button.dividir{
+    font-size: 22px;
+}
+
 button.somar {
     background-color: #4CAF50;
 }
