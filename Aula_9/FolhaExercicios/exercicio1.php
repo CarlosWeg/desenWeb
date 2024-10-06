@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 1 - Soma de três valores</title>
+    <title>Exercício 1</title>
 </head>
 <body>
     <form action="" method="POST">
