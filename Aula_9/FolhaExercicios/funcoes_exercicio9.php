@@ -1,5 +1,6 @@
 <?php
 function calcularParcelasCompostos($parcelas, $valor_vista) {
+    //Fórmula de Juros Compostos: M=P×(1+i)t 
     $taxa_base = 2.0;
     $incremento_taxa = 0.3;
     $juros = $taxa_base + (($parcelas - 24) / 12 * $incremento_taxa);
