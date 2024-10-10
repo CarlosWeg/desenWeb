@@ -8,20 +8,23 @@
 <body>
     <form action="" method="POST">
         <label for="ladoA">Lado A (m):</label>
-        <input type="number" name="ladoA" required>
+        <input type="number" name="ladoA" step="0.01" required>
         <br>
         <label for="ladoB">Lado B (m):</label>
-        <input type="number" name="ladoB" required>
+        <input type="number" name="ladoB" step="0.01" required>
         <br>
         <input type="submit" value="Calcular">
     </form>
 
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            require 'funcoes_exercicio4.php';
+            require_once 'funcoes_exercicio4.php';
+
             $ladoA = $_POST['ladoA'];
             $ladoB = $_POST['ladoB'];
-            calcularAreaRetangulo($ladoA, $ladoB);
+
+            $area = calcularAreaRetangulo($ladoA, $ladoB);
+            imprimirResultado($ladoA, $ladoB, $area);
         }
     ?>
 </body>

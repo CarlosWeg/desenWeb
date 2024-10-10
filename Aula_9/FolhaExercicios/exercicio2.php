@@ -20,7 +20,7 @@
 
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            require 'funcoes_exercicio2.php'; 
+            require_once 'funcoes_exercicio2.php'; 
             
             $valor = $_POST['valor'];
             $divisao = calcDivisao($valor);

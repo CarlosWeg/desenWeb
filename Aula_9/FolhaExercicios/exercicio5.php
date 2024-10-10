@@ -8,20 +8,26 @@
 <body>
     <form action="" method="POST">
         <label for="base">Base (m):</label>
-        <input type="number" name="base" required>
+        <input type="number" name="base" step="0.01" required>
         <br>
         <label for="altura">Altura (m):</label>
-        <input type="number" name="altura" required>
+        <input type="number" name="altura" step="0.01" required>
         <br>
         <input type="submit" value="Calcular">
     </form>
 
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            require 'funcoes_exercicio5.php';
+            require_once 'funcoes_exercicio5.php';
+
             $base = $_POST['base'];
             $altura = $_POST['altura'];
-            calcularAreaTriangulo($base, $altura);
+
+            // Cálculo da área
+            $area = calcularAreaTriangulo($base, $altura);
+
+            // Exibição do resultado
+            imprimirResultado($base, $altura, $area);
         }
     ?>
 </body>

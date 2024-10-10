@@ -9,7 +9,7 @@
     
     <form action="" method="POST">
         <label>Escolha o número de parcelas:</label>
-        <select name="parcelas">
+        <select name="parcelas" required>
             <option value="24">24 vezes</option>
             <option value="36">36 vezes</option>
             <option value="48">48 vezes</option>
@@ -21,7 +21,7 @@
 
     <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            require 'funcoes_exercicio9.php';
+            require_once 'funcoes_exercicio9.php';
             $parcelas = $_POST['parcelas'];
             $valor_vista = 8654.00;
             

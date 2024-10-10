@@ -8,7 +8,7 @@
 <body>
     
     <?php
-    include 'funcoes_exercicio10.php';
+    require_once 'funcoes_exercicio10.php';
 
     $pastas = array(
         "bsn" => array(

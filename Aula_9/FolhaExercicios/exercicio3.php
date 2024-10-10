@@ -14,7 +14,7 @@
     <form action = "" method = "POST">
 
         <label for="lado">Lado do Quadrado (m)</label>
-        <input type = "number" name = "lado" required>
+        <input type = "number" name = "lado" step="0.01" required>
         <br>
         <input type = "submit" value = "Calcular">
 
@@ -23,7 +23,7 @@
     <?php
 
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
-            require 'funcoes_exercicio3.php';
+            require_once 'funcoes_exercicio3.php';
 
             $lado = $_POST['lado'];
             $area = calcArea($lado);

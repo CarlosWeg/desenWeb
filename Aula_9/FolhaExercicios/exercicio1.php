@@ -21,7 +21,7 @@
 
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            require 'funcoes_exercicio1.php';
+            require_once 'funcoes_exercicio1.php';
             $valor1 = $_POST['valor1'];
             $valor2 = $_POST['valor2'];
             $valor3 = $_POST['valor3'];
