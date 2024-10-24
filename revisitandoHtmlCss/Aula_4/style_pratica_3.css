@@ -1,0 +1,46 @@
+html {
+    background-color:lightgrey;
+    font-family: Arial, 
+}
+
+body,header{
+    background-color: white;
+}
+
+body {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto_redonda {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.info {
+    text-align: left;
+}
+
+section {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
