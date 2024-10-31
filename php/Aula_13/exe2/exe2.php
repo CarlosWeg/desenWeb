@@ -44,7 +44,8 @@ class GerenciadorFamilia {
     }
 }
 
-// Criando instâncias para cada membro da família
+// Criando instâncias para cada membro da família (dados fictícios)
+
 // Pai
 $pai = new Pessoa();
 $pai->setNome("Carlos");

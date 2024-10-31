@@ -175,8 +175,8 @@ class Pessoa {
 
 // Uso:
 $pessoa = new Pessoa();
-$pessoa->setNome("João");
-$pessoa->setSobrenome("Silva");
+$pessoa->setNome("Carlos");
+$pessoa->setSobrenome("Weege");
 $pessoa->setDataNascimento("1990-01-01");
 $pessoa->setCpfcnpj("123.456.789-00");
 $pessoa->setTipo(1);
@@ -185,15 +185,15 @@ $pessoa->setTelefone("(11) 99999-9999");
 $endereco = new Endereco();
 $endereco->setLogradouro("Rua das Flores");
 $endereco->setBairro("Centro");
-$endereco->setCidade("São Paulo");
-$endereco->setEstado("SP");
+$endereco->setCidade("Rio do Sul");
+$endereco->setEstado("SC");
 $endereco->setCep("01234-567");
 $pessoa->setEndereco($endereco);
 
 $contato = new Contato();
 $contato->setTipo(1);
 $contato->setNome("Email");
-$contato->setValor("joao@email.com");
+$contato->setValor("carlosweege@email.com");
 $pessoa->setContato($contato);
 
 ?>
